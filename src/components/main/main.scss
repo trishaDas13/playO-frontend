@@ -1,0 +1,100 @@
+header {
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    background-color: rgb(250, 251, 252);
+    border-color: rgb(223, 225, 230);
+    color: rgb(9, 30, 66);
+    cursor: text;
+    border-radius: 3px;
+    border-width: 2px;
+    border-style: solid;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out 0s,
+      border-color 0.2s ease-in-out 0s;
+    line-height: 1.42857;
+    padding: 8px 6px;
+    width: 300px;
+    height: 30px;
+    &:hover {
+      background-color: rgb(235, 236, 240);
+    }
+    &:focus {
+      background-color: rgb(255, 255, 255);
+      border-color: rgb(76, 154, 255);
+    }
+  }
+  img {
+    border-radius: 50%;
+  }
+}
+main {
+  padding: 1rem 3rem;
+  .above {
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2rem;
+    .pagination {
+      display: flex;
+      gap: 10px;
+      font-weight: 600;
+      align-items: center;
+      select {
+        all: unset;
+        background-color: rgba(158, 158, 158, 0.2);
+        border-radius: 8px;
+        cursor: pointer;
+        width: 45px;
+        height: 25px;
+        text-align: center;
+      }
+    }
+    button {
+      all: unset;
+      padding: 8px 12px 8px 12px;
+      border-radius: 8px;
+      background-color: black;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+  table {
+    // table-layout: fixed;
+    min-width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    thead {
+      width: 100%;
+      tr {
+        th {
+          text-align: center;
+          padding: 8px;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+    tbody {
+      tr {
+        color: #000000;
+        text-align: left;
+        &:nth-child(odd) {
+          background-color: rgba(247, 247, 247, 1);
+        }
+        td {
+          padding: 8px;
+          text-align: center;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
