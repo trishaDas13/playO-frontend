@@ -33,10 +33,26 @@ const Form = ({ setFormShow, editItem, fetchData }) => {
     });
   };
 
-  // Sending data to the server
+  //todo: Sending data to the server
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      const requiredFields = [
+        "productName",
+        "cxName",
+        "cxEmail",
+        "date",
+        "amount",
+        "paymentMode",
+        "status",
+      ];
+      const emptyFields = requiredFields.filter((field) => !formData[field]);
+
+      // If any required field is empty, display alert and return
+      if (emptyFields.length > 0) {
+        alert("Please fill in all the required fields.");
+        return;
+      }
       if (editItem) {
         // If editing, use PATCH method and send ID of the item being edited
         try {
@@ -44,7 +60,7 @@ const Form = ({ setFormShow, editItem, fetchData }) => {
             `https://playo-backend-jwzz.onrender.com/api/v1/data`,
             formData
           );
-          fetchData()
+          fetchData();
         } catch (err) {
           console.log(err.message);
         }
@@ -55,7 +71,7 @@ const Form = ({ setFormShow, editItem, fetchData }) => {
             "https://playo-backend-jwzz.onrender.com/api/v1/data",
             formData
           );
-          fetchData()
+          fetchData();
         } catch (err) {
           console.log(err.message);
         }
@@ -116,7 +132,7 @@ const Form = ({ setFormShow, editItem, fetchData }) => {
             name="cxEmail"
             value={formData.cxEmail}
             onChange={handleChange}
-            placeholder="Enter email ID"
+            placeholder="must be Unique*"
           />
         </div>
         <div className="field">
