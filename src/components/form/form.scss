@@ -1,0 +1,59 @@
+.form{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100svh;
+    background-color: rgba(0, 0, 0, 0.623);
+    z-index: 10;
+    overflow: hidden;
+    .fa-xmark{
+        color: white;
+        font-size: 32px;
+        position: absolute;
+        right: 380px;
+        top: 20px;
+        cursor: pointer;
+    }
+    form{
+        background-color: white;
+        float: right;
+        padding: 2rem;
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 300px; 
+        font-size: 12px;  
+        align-items: center; 
+        .field{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+            input, select{
+                all: unset;
+                border: 2px solid rgba(128, 128, 128, 0.362);
+                padding: 0.4rem 1rem;
+                &:focus{
+                    border: 2px solid rgb(0, 0, 0);
+                }
+            }
+        }
+        button{
+            all: unset;
+            width: 100%;
+            background-color: black;
+            padding: 0.6rem 0;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            margin-top: 2rem;
+            cursor: pointer;
+            border: 2px solid black;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+        }
+    }
+}

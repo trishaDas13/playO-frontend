@@ -67,7 +67,6 @@ main {
     }
   }
   table {
-    // table-layout: fixed;
     min-width: 100%;
     text-align: center;
     border-collapse: collapse;
@@ -88,6 +87,9 @@ main {
         text-align: left;
         &:nth-child(odd) {
           background-color: rgba(247, 247, 247, 1);
+        }
+        &:nth-child(3){
+          text-transform: capitalize;
         }
         td {
           padding: 8px;
